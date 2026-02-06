@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RODZLEADS</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="header">
+    <div class="navbar">
+        <h2 class="logo">RODZLEADS</h2>
+        <nav class="menu">
+            <ul>
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<!-- HERO -->
+<section id="hero" class="hero">
+    <video autoplay muted loop playsinline class="hero-video">
+        <source src="MARKETING VIDEO.mp4" type="video/mp4">
+    </video>
+
+    <div class="hero-content">
+        <h1>Grow Your Business Faster With AI-Powered Tools</h1>
+        <h2 class="sub-hero">Turn Visitors into Customers in Minutes</h2>
+        <a href="#contact" class="cta-button">Get Started</a>
+    </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="about-section">
+    <div class="about-wrapper">
+        <div class="about-image">
+            <video autoplay muted loop playsinline preload="metadata">
+                <source src="MARKETING-VIDEO.mp4" type="video/mp4">
+            </video>
+        </div>
+
+        <div class="about-content">
+            <h2>What We Offer</h2>
+            <p>
+                RODZLEADS helps businesses streamline operations and grow online
+                through AI-powered tools and digital solutions.
+            </p>
+
+            <ul>
+                <li>Automated email campaigns to generate leads</li>
+                <li>Website design and development</li>
+                <li>Social media management and content strategy</li>
+                <li>Virtual assistance for daily operations</li>
+            </ul>
+
+            <p class="highlight">
+                Focus on your business — we handle the tech.
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer id="contact">
+    <div class="footer-contact">
+        <h3>Contact Us</h3>
+        <p>Email: rodzleads490@gmail.com</p>
+    </div>
+    <div class="footer-bottom">
+        <p>© 2025 RODZLEADS. All rights reserved.</p>
+    </div>
+</footer>
+
+<!-- JS -->
+<script>
+const header = document.querySelector('.header');
+const aboutWrapper = document.querySelector('.about-wrapper');
+
+window.addEventListener('scroll', () => {
+    header.style.background =
+        window.scrollY > 20
+        ? 'rgba(0,0,0,0.95)'
+        : 'rgba(0,0,0,0.85)';
+
+    const trigger = window.innerHeight * 0.85;
+    if (aboutWrapper.getBoundingClientRect().top < trigger) {
+        aboutWrapper.classList.add('show');
+    }
+});
+</script>
+
+</body>
+</html>
